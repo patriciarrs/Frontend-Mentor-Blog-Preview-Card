@@ -1,3 +1,53 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf"),
+    url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  --black: hsl(0, 0%, 7%);
+  --grey: hsl(0, 0%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --yellow: hsl(47, 88%, 63%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: var(--yellow);
+  font-family: FigTree, sans-serif;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--white);
+}
+
+.topic {
+  background-color: var(--yellow);
+}
+
+.copywrite {
+  color: var(--grey);
+}
+
+.footer {
+  bottom: 0;
+  font-style: italic;
+  position: fixed;
+  width: 100%;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
