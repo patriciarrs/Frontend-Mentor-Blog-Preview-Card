@@ -15,12 +15,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .body {
   background-color: var(--yellow);
+  color: var(--black);
   font-family: FigTree, sans-serif;
   height: 100vh;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .main {
@@ -31,14 +36,74 @@
 
 .card {
   background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px 0px var(--black);
+  margin: auto;
+  padding: 24px;
+  width: clamp(327px, 87vw, 384px);
 }
 
-.topic {
+.article-image {
+  border-radius: 10px;
+  height: 200px;
+  max-width: 100%;
+}
+
+.content {
+  margin: 24px 0;
+}
+
+.category {
   background-color: var(--yellow);
+  border-radius: 4px;
+  font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
+  font-weight: bold;
+  margin: 0;
+  max-width: 82px;
+  padding: 6px 0px;
+  text-align: center;
 }
 
-.copywrite {
+.date {
+  font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
+  margin: 1.2rem 0 0;
+}
+
+.title {
+  color: var(--black);
+  font-size: clamp(2rem, 1.8592rem + 0.3756vw, 2.4rem);
+  font-weight: bold;
+  margin: 12px 0;
+  text-decoration: none;
+}
+
+.title:hover,
+.title:active {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.description {
   color: var(--grey);
+  font-size: clamp(1.4rem, 1.3296rem + 0.1878vw, 1.6rem);
+  margin: 0;
+}
+
+.author {
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+
+.author-picture {
+  margin: 0 12px 0 0;
+  max-height: 32px;
+}
+
+.author-name {
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .footer {
@@ -49,10 +114,20 @@
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    box-shadow: 16px 16px 0px 0px var(--black);
+  }
+
+  .category {
+    padding: 7px 12px;
+  }
 }
