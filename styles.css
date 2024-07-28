@@ -79,7 +79,8 @@ html {
 }
 
 .title:hover,
-.title:active {
+.title:active,
+.title:focus {
   color: var(--yellow);
   cursor: pointer;
 }
