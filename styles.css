@@ -37,7 +37,7 @@ html {
   background-color: var(--white);
   border: 1px solid var(--black);
   border-radius: 20px;
-  box-shadow: 8px 8px 0px 0px var(--black);
+  box-shadow: 8px 8px 0 0 var(--black);
   margin: auto;
   padding: 2.4rem;
   width: clamp(32.7rem, 87vw, 38.4rem);
@@ -45,7 +45,9 @@ html {
 
 .article-image {
   border-radius: 10px;
+  display: block; /* removes space below image */
   height: 20rem;
+  margin: 0 0 2.4rem;
   max-width: 100%;
 }
 
@@ -60,7 +62,7 @@ html {
   font-weight: bold;
   margin: 0;
   max-width: 8.2rem;
-  padding: 0.6rem 0rem;
+  padding: 0.6rem 0;
   text-align: center;
 }
 
@@ -93,11 +95,11 @@ html {
 .author {
   align-items: center;
   display: flex;
-  margin: 0;
+  margin: 2.4rem 0 0;
 }
 
 .author-picture {
-  margin: 0 1.2prem 0 0;
+  margin: 0 1.2rem 0 0;
   max-height: 3.2rem;
 }
 
@@ -123,7 +125,7 @@ html {
 
 @media only screen and (min-width: 600px) {
   .card {
-    box-shadow: 16px 16px 0px 0px var(--black);
+    box-shadow: 16px 16px 0 0 var(--black);
   }
 
   .category {
