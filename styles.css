@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Figtree";
-  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf"),
-    url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
 }
 
 :root {
@@ -40,18 +39,18 @@ html {
   border-radius: 20px;
   box-shadow: 8px 8px 0px 0px var(--black);
   margin: auto;
-  padding: 24px;
-  width: clamp(327px, 87vw, 384px);
+  padding: 2.4rem;
+  width: clamp(32.7rem, 87vw, 38.4rem);
 }
 
 .article-image {
   border-radius: 10px;
-  height: 200px;
+  height: 20rem;
   max-width: 100%;
 }
 
 .content {
-  margin: 24px 0;
+  margin: 2.4rem 0;
 }
 
 .category {
@@ -60,8 +59,8 @@ html {
   font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
   font-weight: bold;
   margin: 0;
-  max-width: 82px;
-  padding: 6px 0px;
+  max-width: 8.2rem;
+  padding: 0.6rem 0rem;
   text-align: center;
 }
 
@@ -74,7 +73,7 @@ html {
   color: var(--black);
   font-size: clamp(2rem, 1.8592rem + 0.3756vw, 2.4rem);
   font-weight: bold;
-  margin: 12px 0;
+  margin: 1.2rem 0;
   text-decoration: none;
 }
 
@@ -98,8 +97,8 @@ html {
 }
 
 .author-picture {
-  margin: 0 12px 0 0;
-  max-height: 32px;
+  margin: 0 1.2prem 0 0;
+  max-height: 3.2rem;
 }
 
 .author-name {
@@ -129,6 +128,6 @@ html {
   }
 
   .category {
-    padding: 7px 12px;
+    padding: 0.7rem 1.2rem;
   }
 }
