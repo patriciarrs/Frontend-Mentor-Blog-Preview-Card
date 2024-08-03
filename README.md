@@ -12,6 +12,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
     - [Static vs variable fonts](#static-vs-variable-fonts)
+    - [@font-face](#font-face)
     - [CSS custom properties](#css-custom-properties)
     - [rem units](#rem-units)
     - [clamp() CSS function](#clamp-css-function)
@@ -54,6 +55,10 @@ Users should be able to:
 I learned the difference between static and variable fonts.
 I decided to use variable fonts because of their advantages (mainly using only one file and a smaller file size).
 
+#### @font-face
+
+I used the `@font-face` CSS at-rule to specify the custom font with which to display text (loaded from the repo).
+
 #### CSS custom properties
 
 I used CSS custom properties (CSS variables or cascading variables) to represent the color values to be reused throughout the stylesheets.
@@ -74,7 +79,7 @@ Example:
 
 #### rem units
 
-I used rem (root em) instead of px (pixels) since it has several advantages related to responsiveness (different screen sizes and zooming), accessibility (respecting users' browser's settings), and maintainability (single point of control and consistency).
+I used `rem` (root `em`) instead of `px` (pixels) since it has several advantages related to responsiveness (different screen sizes and zooming), accessibility (respecting users' browser's settings), and maintainability (single point of control and consistency).
 
 ```css
 html {
@@ -82,7 +87,7 @@ html {
 }
 ```
 
-Setting the html font-size to 62.5%; translates the base font size to 10px if the browser's default font size is 16px (which it usually is). This makes it easier to calculate rem values, as 1rem will equal 10px.
+Setting the `html` `font-size` to 62.5% translates the base `font-size` to 10px if the browser's default font size is 16px (which it usually is). This makes it easier to calculate `rem` values, as 1 rem will equal 10px.
 
 #### clamp() CSS function
 
@@ -117,6 +122,7 @@ I achieved that with the [stylelint-order](https://github.com/hudochenkov/stylel
 ### Useful resources
 
 - [Variable Fonts Vs Static Fonts](https://www.monotype.com/resources/expertise/variable-fonts-101) - This helped me understand the difference between static and variable fonts.
+- [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) - This helped me remember how to use the `@font-face` CSS at-rule to specify a custom font.
 - [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - This is an article that explains how to use CSS custom properties.
 - [CSS Clamp(): The Responsive Combination We’ve All Been Waiting For](https://blog.bitsrc.io/css-clamp-the-responsive-combination-weve-all-been-waiting-for-f1ce1981ea6e) - This is an amazing article which helped me finally understand `clamp()`. I'd recommend it to anyone still learning this concept.
 - [Linearly Scale font-size with CSS clamp() Based on the Viewport](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case) - This article includes a calculator where we can plug in the min and max font-sizes and it will compute the preferred font-size value.
