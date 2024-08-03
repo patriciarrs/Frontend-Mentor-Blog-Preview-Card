@@ -1,22 +1,24 @@
 # Frontend Mentor - Blog preview card solution
 
-This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Static vs variable fonts](#static-vs-variable-fonts)
+- [CSS custom properties](#css-custom-properties)
+- [rem units](#rem-units)
+- [clamp() CSS function](#clamp-css-function)
+- [CSS media queries](#css-media-queries)
+- [Order CSS properties alphabetically](#order-css-properties-alphabetically)
+- [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -24,24 +26,16 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 Users should be able to:
 
-- See hover and focus states for all interactive elements on the page
+- See hover and focus states for all interactive elements on the page.
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution](https://github.com/patriciarrs/Frontend-Mentor-Blog-Preview-Card)
+- [Live Site](https://patriciarrs.github.io/Frontend-Mentor-Blog-Preview-Card/)
 
 ## My process
 
@@ -49,62 +43,85 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS media queries
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### Static vs variable fonts
 
-To see how you can add code snippets, see below:
+I learned the difference between static and variable fonts.
+I decided to use variable fonts because of their advantages (mainly using only one file and a smaller file size).
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+#### CSS custom properties
+
+I used CSS custom properties (CSS variables or cascading variables) to represent the color values to be reused throughout the stylesheets.
+Example:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  --black: hsl(0, 0%, 7%);
+  --grey: hsl(0, 0%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --yellow: hsl(47, 88%, 63%);
+}
+
+.body {
+  color: var(--black);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+#### rem units
+
+I used rem (root em) instead of px (pixels) since it has several advantages related to responsiveness (different screen sizes and zooming), accessibility (respecting users' browser's settings), and maintainability (single point of control and consistency).
+
+```css
+html {
+  font-size: 62.5%;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+Setting the html font-size to 62.5%; translates the base font size to 10px if the browser's default font size is 16px (which it usually is). This makes it easier to calculate rem values, as 1rem will equal 10px.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+#### clamp() CSS function
 
-### Continued development
+To reduce font size for smaller screens without using media queries, I used the `clamp()` CSS function.
+The `clamp()` CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound.
+The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
+Example:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+```css
+/* clamp(min, val, max) */
+font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
+```
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+#### CSS media queries
+
+I used media queries to handle cases where I needed to apply CSS styles depending on screen resolution.
+Example:
+
+```css
+@media only screen and (min-width: 600px) {
+  .card {
+    box-shadow: 16px 16px 0px 0px var(--black);
+ }
+}
+```
+
+#### Order CSS properties alphabetically
+
+I wanted to have my CSS properties ordered alphabetically on file save.
+I achieved that with the [stylelint-order](https://github.com/hudochenkov/stylelint-order) plugin for [Stylelint](https://stylelint.io/) by using the rule `properties-alphabetical-order`.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Variable Fonts Vs Static Fonts](https://www.monotype.com/resources/expertise/variable-fonts-101) - This helped me understand the difference between static and variable fonts.
+- [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - This is an article that explains how to use CSS custom properties.
+- [CSS Clamp(): The Responsive Combination We’ve All Been Waiting For](https://blog.bitsrc.io/css-clamp-the-responsive-combination-weve-all-been-waiting-for-f1ce1981ea6e) - This is an amazing article which helped me finally understand `clamp()`. I'd recommend it to anyone still learning this concept.
+- [Linearly Scale font-size with CSS clamp() Based on the Viewport](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case) - This article includes a calculator where we can plug in the min and max font-sizes and it will compute the preferred font-size value.
+- [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) - This helped me remember the correct syntax for writing media queries.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@patriciarrs](https://www.frontendmentor.io/profile/patriciarrs)
