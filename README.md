@@ -105,7 +105,7 @@ Example:
 @media only screen and (min-width: 600px) {
   .card {
     box-shadow: 16px 16px 0px 0px var(--black);
- }
+  }
 }
 ```
 
