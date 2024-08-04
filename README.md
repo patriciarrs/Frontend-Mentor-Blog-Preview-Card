@@ -125,7 +125,7 @@ I achieved that with the [stylelint-order](https://github.com/hudochenkov/stylel
 - [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) - This helped me remember how to use the `@font-face` CSS at-rule to specify a custom font.
 - [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - This is an article that explains how to use CSS custom properties.
 - [CSS Clamp(): The Responsive Combination We’ve All Been Waiting For](https://blog.bitsrc.io/css-clamp-the-responsive-combination-weve-all-been-waiting-for-f1ce1981ea6e) - This is an amazing article which helped me finally understand `clamp()`. I'd recommend it to anyone still learning this concept.
-- [Linearly Scale font-size with CSS clamp() Based on the Viewport](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case) - This article includes a calculator where we can plug in the min and max font-sizes and it will compute the preferred font-size value.
+- [clamp() Calculator](https://chrisburnell.com/clamp-calculator/?font-size-root=10&size-min=14&size-max=16&viewport-min=320&viewport-max=1280&viewport-units=vw) - This article includes a calculator where we can plug in the min and max font-sizes and it will compute the preferred font-size value.
 - [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) - This helped me remember the correct syntax for writing media queries.
 
 ## Author
