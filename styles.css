@@ -49,10 +49,7 @@ html {
   height: 20rem;
   margin: 0 0 2.4rem;
   max-width: 100%;
-}
-
-.content {
-  margin: 2.4rem 0;
+  object-fit: cover;
 }
 
 .category {
@@ -60,6 +57,7 @@ html {
   border-radius: 4px;
   font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
   font-weight: bold;
+  line-height: 150%;
   margin: 0;
   max-width: 8.2rem;
   padding: 0.6rem 1.2rem;
@@ -69,27 +67,32 @@ html {
 
 .date {
   font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
+  line-height: 150%;
   margin: 1.2rem 0 0;
 }
 
 .title {
-  color: var(--black);
   font-size: clamp(2rem, 1.8592rem + 0.3756vw, 2.4rem);
-  font-weight: bold;
+  line-height: 150%;
   margin: 1.2rem 0;
+}
+
+.title-link {
+  color: var(--black);
   text-decoration: none;
 }
 
-.title:hover,
-.title:active,
-.title:focus {
+.title-link:hover,
+.title-link:active,
+.title-link:focus {
   color: var(--yellow);
   cursor: pointer;
 }
 
 .description {
   color: var(--grey);
-  font-size: clamp(1.4rem, 1.3296rem + 0.1878vw, 1.6rem);
+  font-size: clamp(1.4rem, 1.333rem + 0.208vw, 1.6rem);
+  line-height: 150%;
   margin: 0;
 }
 
@@ -107,6 +110,7 @@ html {
 .author-name {
   font-size: 1.4rem;
   font-weight: bold;
+  line-height: 150%;
 }
 
 .footer {
