@@ -20,7 +20,6 @@ html {
 
 .body {
   background-color: var(--yellow);
-  color: var(--black);
   font-family: FigTree, sans-serif;
   margin: 0;
   min-height: 100vh;
@@ -35,12 +34,32 @@ html {
 
 .card {
   background-color: var(--white);
+  border-radius: 20px;
+  margin: auto;
+  width: clamp(32.7rem, 87vw, 38.4rem);
+}
+
+.card-clickable {
   border: 1px solid var(--black);
   border-radius: 20px;
   box-shadow: 8px 8px 0 0 var(--black);
-  margin: auto;
+  color: var(--black);
+  display: block;
   padding: 2.4rem;
-  width: clamp(32.7rem, 87vw, 38.4rem);
+  text-decoration: none;
+}
+
+.card-clickable:hover,
+.card-clickable:focus,
+.card-clickable:active {
+  box-shadow: 16px 16px 0 0 var(--black);
+  cursor: pointer;
+}
+
+.card-clickable:hover .title,
+.card-clickable:focus .title,
+.card-clickable:active .title {
+  color: var(--yellow);
 }
 
 .article-image {
@@ -75,18 +94,6 @@ html {
   font-size: clamp(2rem, 1.8592rem + 0.3756vw, 2.4rem);
   line-height: 150%;
   margin: 1.2rem 0;
-}
-
-.title-link {
-  color: var(--black);
-  text-decoration: none;
-}
-
-.title-link:hover,
-.title-link:active,
-.title-link:focus {
-  color: var(--yellow);
-  cursor: pointer;
 }
 
 .description {
@@ -129,10 +136,6 @@ html {
 }
 
 @media only screen and (min-width: 600px) {
-  .card {
-    box-shadow: 16px 16px 0 0 var(--black);
-  }
-
   .category {
     padding: 0.7rem 1.2rem;
     width: auto;
