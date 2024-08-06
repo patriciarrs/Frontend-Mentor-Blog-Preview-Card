@@ -12,11 +12,9 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
     - [Static vs variable fonts](#static-vs-variable-fonts)
-    - [@font-face](#font-face)
     - [CSS custom properties](#css-custom-properties)
     - [rem units](#rem-units)
     - [clamp() CSS function](#clamp-css-function)
-    - [CSS media queries](#css-media-queries)
     - [Order CSS properties alphabetically](#order-css-properties-alphabetically)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -54,10 +52,6 @@ Users should be able to:
 
 I learned the difference between static and variable fonts.
 I decided to use variable fonts because of their advantages (mainly using only one file and a smaller file size).
-
-#### @font-face
-
-I used the `@font-face` CSS at-rule to specify the custom font with which to display text (loaded from the repo).
 
 #### CSS custom properties
 
@@ -101,19 +95,6 @@ Example:
 font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
 ```
 
-#### CSS media queries
-
-I used media queries to handle cases where I needed to apply CSS styles depending on screen resolution.
-Example:
-
-```css
-@media only screen and (min-width: 600px) {
-  .card {
-    box-shadow: 16px 16px 0px 0px var(--black);
-  }
-}
-```
-
 #### Order CSS properties alphabetically
 
 I wanted to have my CSS properties ordered alphabetically on file save.
@@ -122,11 +103,9 @@ I achieved that with the [stylelint-order](https://github.com/hudochenkov/stylel
 ### Useful resources
 
 - [Variable Fonts Vs Static Fonts](https://www.monotype.com/resources/expertise/variable-fonts-101) - This helped me understand the difference between static and variable fonts.
-- [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) - This helped me remember how to use the `@font-face` CSS at-rule to specify a custom font.
 - [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - This is an article that explains how to use CSS custom properties.
 - [CSS Clamp(): The Responsive Combination We’ve All Been Waiting For](https://blog.bitsrc.io/css-clamp-the-responsive-combination-weve-all-been-waiting-for-f1ce1981ea6e) - This is an amazing article which helped me finally understand `clamp()`. I'd recommend it to anyone still learning this concept.
 - [clamp() Calculator](https://chrisburnell.com/clamp-calculator/?font-size-root=10&size-min=14&size-max=16&viewport-min=320&viewport-max=1280&viewport-units=vw) - This article includes a calculator where we can plug in the min and max font-sizes and it will compute the preferred font-size value.
-- [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) - This helped me remember the correct syntax for writing media queries.
 
 ## Author
 
