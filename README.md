@@ -16,6 +16,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
     - [CSS custom properties](#css-custom-properties)
     - [rem units](#rem-units)
     - [clamp() CSS function](#clamp-css-function)
+    - [LVHA-order](#lvha-order)
     - [Order CSS properties alphabetically](#order-css-properties-alphabetically)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -97,6 +98,11 @@ Example:
 /* clamp(min, val, max) */
 font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
 ```
+
+#### LVHA-order
+
+Styles defined by link-related pseudo-classes can be overridden by any subsequent styles that have at least equal specificity.
+To style links appropriately, we should use the LVHA-order: :link — :visited — :hover — :active.
 
 #### Order CSS properties alphabetically
 
