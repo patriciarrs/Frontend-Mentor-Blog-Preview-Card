@@ -46,6 +46,7 @@ html {
   border-radius: 20px;
   box-shadow: 8px 8px 0 0 var(--black);
   color: var(--black);
+  cursor: pointer;
   display: block;
   padding: 2.4rem;
   text-decoration: none;
@@ -55,7 +56,6 @@ html {
 .card-clickable:focus,
 .card-clickable:active {
   box-shadow: 16px 16px 0 0 var(--black);
-  cursor: pointer;
 }
 
 .card-clickable:hover .title,
