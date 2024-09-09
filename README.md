@@ -53,27 +53,29 @@ Users should be able to:
 I learned the difference between static and variable fonts.
 I decided to use variable fonts because of their advantages (mainly using only one file and a smaller file size).
 
+---
+
 #### @font-face
 
 I used the `@font-face` CSS at-rule to specify the custom font to display text (loaded from the repo).
 
+---
+
 #### CSS custom properties
 
 I used CSS custom properties (CSS variables or cascading variables) to represent the color values to be reused throughout the stylesheets.
-Example:
 
 ```css
 :root {
   --black: hsl(0, 0%, 7%);
-  --grey: hsl(0, 0%, 50%);
-  --white: hsl(0, 0%, 100%);
-  --yellow: hsl(47, 88%, 63%);
 }
 
 .body {
   color: var(--black);
 }
 ```
+
+---
 
 #### rem units
 
@@ -85,24 +87,34 @@ html {
 }
 ```
 
-Setting the `html` `font-size` to 62.5% translates the base `font-size` to 10px if the browser's default font size is 16px (which it usually is). This makes it easier to calculate `rem` values, as 1 rem will equal 10px.
+Setting the `html` `font-size` to 62.5% translates the base `font-size` to 10px if the browser's default font size is 16px (which it usually is).
+
+This makes it easier to calculate `rem` values, as 1 rem will equal 10px.
+
+---
 
 #### clamp() CSS function
 
 To reduce font size for smaller screens without using media queries, I used the `clamp()` CSS function.
+
 The `clamp()` CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound.
+
 The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
-Example:
 
 ```css
 /* clamp(min, val, max) */
 font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
 ```
 
+---
+
 #### LVHA-order
 
 Styles defined by link-related pseudo-classes can be overridden by any subsequent styles that have at least equal specificity.
+
 To style links appropriately, we should use the LVHA-order: :link — :visited — :hover — :active.
+
+---
 
 #### Order CSS properties alphabetically
 
